@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>GCamp</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+
+<body>
+<br /></br>
+  <nav class="navbar navbar-fixed-top navbar-inverse" role="navigation">
+    <p class="navbar-text">gCamp</p>
+
+  </nav>
+
+  <div class="container"><br /></br>
+    <%= yield %>
+
+  </div>
+
+
+
+</body>
+
+</html>
