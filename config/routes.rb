@@ -4,9 +4,11 @@ Rails.application.routes.draw do
 # Rails.application.routes.draw do
 #   root to: "pages#index"
 
-  get 'home'   => "welcome#home"
   get 'about' => "welcome#about"
   get 'terms' => "welcome#terms"
+  get 'faq'   => "welcome#faq"
+
+
 
 
 

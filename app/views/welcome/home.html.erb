@@ -1,62 +1,69 @@
+<div class="jumbotron">
+  <h1> gCamp </h1><h3><small>Your life, organized.</small></h3>
+</div>
 
-    <div class="jumbotron">
-      <h1> gCamp </h1> <br></br><strong>Your life, organized.</strong><br /></br>
+  <div class="row">
+    <div class="col-md-4">
+      <div class="panel panel-default"> <%= image_tag "guy with tablet.jpg", class: "img-responsive" %></div>
+    </div>
+    <div class="col-md-4">
+      <div class="panel panel-default"><%= image_tag "paperwork.jpg", class: "img-responsive"%></div>
+    </div>
+    <div class="col-md-4">
+      <div class="panel panel-default"> <%= image_tag "guy with headphones.jpg", class: "img-responsive"%></div>
+    </div>
+  </div>
+
+
+  <div class="row">
+    <div class="col-md-4">
+      <div class="panel panel-primary panel-height">
+        <div class="panel-heading">
+          <h3 style="color:black" class="panel-title">Tasks</h3>
+        </div>
+        <div class="panel-body">
+          Grouped by project and list. Just the way you like'em
+        </div>
+
+      </div>
     </div>
 
 
-    <br /></br><div class="row">
-      <div class="col-xs-4"> <%= image_tag "guy with tablet.jpg", class: "img-responsive" %></div>
-      <div class="col-xs-4"> <%= image_tag "paperwork.jpg", class: "img-responsive"%></div>
-      <div class="col-xs-4"> <%= image_tag "guy with headphones.jpg", class: "img-responsive"%><br /></br> </div>
-    </div>
-
-
-    <div class="row">
-      <div class="col-md-4">
-        <div class="panel panel-primary panel-height">
-          <div class="panel-heading">
-            <h3 class="panel-title">Tasks</h3>
-          </div>
-          <div class="panel-body">
-            Grouped by project and list. Just the way you like'em
-          </div> 
-
+    <div class="col-md-4">
+      <div class="panel panel-primary panel-height">
+        <div class="panel-heading">
+          <h3 style="color:black" class="panel-title">Documents</h3>
         </div>
-      </div>
-
-
-      <div class="col-md-4">
-        <div class="panel panel-primary panel-height">
-          <div class="panel-heading">
-            <h3 class="panel-title">Documents</h3>
-          </div>
-          <div class="panel-body">
-            <ul>
-              <li>Upload</li>
-              <li>Comment</li>
-              <li>Revise</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-
-      <div class="col-md-4">
-        <div class="panel panel-primary panel-height">
-          <div class="panel-heading">
-            <h3 class="panel-title">Comments</h3>
-          </div>
-          <div class="panel-body">
-
-            <ul>
-              <li>Comment on tasks and documents</li>
-              <li>Get email notification</li>
-            </ul>
-          </div>
+        <div class="panel-body">
+          <ul>
+            <li>Upload</li>
+            <li>Comment</li>
+            <li>Revise</li>
+          </ul>
         </div>
       </div>
     </div>
 
-  </body>
 
-  </html>
+    <div class="col-md-4">
+      <div class="panel panel-primary panel-height">
+        <div class="panel-heading">
+          <h3 style="color:black" class="panel-title">Comments</h3>
+        </div>
+        <div class="panel-body">
+
+          <ul>
+            <li>Comment on tasks and documents</li>
+            <li>Get email notification</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <% @quotes.each do |quote| %>
+  <blockquote>
+    <p><%= quote[0] %></p>
+    <footer><i><%= quote[1] %></i></footer>
+  </blockquote>
+  <% end %>
